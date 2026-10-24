@@ -1,116 +1,53 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#102b40">
-<title>منوی کانال‌های ایستگاه راه‌آهن تهران</title>
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Tahoma,Arial,sans-serif;
-  background:#eef3f7;
-  color:#183247;
-}
-header{
-  background:linear-gradient(135deg,#102b40,#176b78);
-  color:white;text-align:center;padding:32px 16px 28px;
-  border-radius:0 0 28px 28px;
-}
-.logo{font-size:48px}
-h1{font-size:23px;margin:10px 0}
-header p{font-size:13px;line-height:2;color:#e0edf2;margin:8px 0 0}
-main{max-width:620px;margin:22px auto;padding:0 14px 30px}
-h2{font-size:17px;margin:22px 4px 14px}
-.channels{display:grid;gap:12px}
-a.channel{
-  display:flex;align-items:center;gap:13px;
-  background:white;border:1px solid #dce6ec;
-  border-radius:16px;padding:15px;
-  color:#183247;text-decoration:none;
-  box-shadow:0 3px 10px #17354b0b;
-  transition:transform .15s,border-color .15s;
-}
-a.channel:active{transform:scale(.985)}
-a.channel:hover{border-color:#218b91}
-.emoji{
-  display:grid;place-items:center;flex-shrink:0;
-  width:48px;height:48px;border-radius:14px;
-  background:#e9f5f4;font-size:25px;
-}
-.info{flex:1;min-width:0}
-.info strong{font-size:14px;display:block;line-height:1.9}
-.info small{display:block;color:#718494;font-size:11px;margin-top:3px}
-.arrow{font-size:24px;color:#21858b}
-.note{
-  margin-top:20px;background:#e1eeef;border-radius:14px;
-  padding:14px;font-size:12px;line-height:2.1;color:#315968;
-}
-footer{text-align:center;font-size:11px;color:#82919c;padding:5px 10px 24px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#083b4c">
+  <meta name="description" content="منوی رسمی دسترسی به کانال‌های اطلاع‌رسانی ایستگاه راه‌آهن تهران">
+  <title>منوی کانال‌های راه‌آهن تهران</title>
+  <style>
+    :root { color-scheme: light; --navy:#083b4c; --teal:#087e8b; --paper:#f3f7f8; --ink:#18323b; --muted:#60747b; --line:#dce7e9; }
+    * { box-sizing:border-box; }
+    html { min-height:100%; background:var(--paper); }
+    body { margin:0; font-family:Tahoma, Arial, sans-serif; color:var(--ink); background:linear-gradient(180deg,#e6f3f5 0,#f7fafb 260px,var(--paper) 100%); min-height:100vh; }
+    .wrap { width:min(100%,760px); margin:auto; padding: max(18px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom)); }
+    header { color:white; border-radius:24px; padding:25px 20px 23px; background:linear-gradient(135deg,#062e40,#087e8b); box-shadow:0 12px 30px #083b4c22; position:relative; overflow:hidden; }
+    header:after { content:""; position:absolute; width:180px;height:180px;border:1px solid #ffffff22;border-radius:50%;left:-48px;top:-75px; }
+    .train { font-size:40px; line-height:1.2; margin-bottom:12px; }
+    h1 { font-size:clamp(21px,5vw,28px); line-height:1.65; margin:0 0 7px; }
+    header p { margin:0; line-height:1.9; color:#e1f5f7; font-size:14px; }
+    .hint { margin:18px 2px 14px; color:var(--muted); font-size:13px; line-height:1.9; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .channel { display:flex; align-items:center; gap:12px; min-height:88px; padding:15px 13px; border:1px solid var(--line); border-radius:18px; background:white; color:var(--ink); text-decoration:none; box-shadow:0 4px 12px #083b4c08; transition:transform .12s ease, box-shadow .12s ease; }
+    .channel:active { transform:scale(.985); }
+    .channel:focus-visible { outline:3px solid #f2a93b; outline-offset:3px; }
+    .emoji { display:grid; place-items:center; flex:0 0 43px; height:43px; border-radius:14px; background:#e9f5f6; font-size:23px; }
+    .label { min-width:0; font-size:14px; font-weight:700; line-height:1.8; }
+    .arrow { margin-right:auto; color:#769198; font-size:18px; }
+    footer { text-align:center; color:var(--muted); font-size:12px; line-height:1.9; margin:22px 4px 0; }
+    @media(max-width:380px) { .grid { grid-template-columns:1fr; } .channel { min-height:76px; } }
+    @media(prefers-reduced-motion:reduce) { * { transition:none !important; } }
+  </style>
 </head>
 <body>
-<header>
-  <div class="logo">🚆</div>
-  <h1>ایستگاه راه‌آهن تهران</h1>
-  <p>سامانه دسترسی سریع به کانال‌های اطلاع‌رسانی</p>
-</header>
-
-<main>
-  <h2>📍 کانال موردنظر خود را انتخاب کنید</h2>
-  <div class="channels">
-
-    <a class="channel" href="https://ble.ir/join/BoX6qVgegH">
-      <span class="emoji">🚉</span>
-      <span class="info"><strong>مسافرین جامانده</strong><small>اطلاع‌رسانی مسافران جامانده</small></span>
-      <span class="arrow">‹</span>
-    </a>
-
-    <a class="channel" href="https://ble.ir/join/2uoshkxrfT">
-      <span class="emoji">📋</span>
-      <span class="info"><strong>حضور و غیاب</strong><small>اطلاعات حضور و غیاب</small></span>
-      <span class="arrow">‹</span>
-    </a>
-
-    <a class="channel" href="https://ble.ir/join/BNYy1KGty4">
-      <span class="emoji">🎫</span>
-      <span class="info"><strong>مسافرین بدون بلیت</strong><small>پیگیری موارد مربوط به بلیت</small></span>
-      <span class="arrow">‹</span>
-    </a>
-
-    <a class="channel" href="https://ble.ir/join/6HtbyBttVR">
-      <span class="emoji">🪪</span>
-      <span class="info"><strong>بلیت غیر همنام</strong><small>اطلاع‌رسانی بلیت‌های غیرهمنام</small></span>
-      <span class="arrow">‹</span>
-    </a>
-
-    <a class="channel" href="https://ble.ir/join/9Pvf6JFfMc">
-      <span class="emoji">⏱️</span>
-      <span class="info"><strong>تأخیرات قطارها</strong><small>اطلاع‌رسانی درباره تأخیر قطارها</small></span>
-      <span class="arrow">‹</span>
-    </a>
-
-    <a class="channel" href="https://ble.ir/join/J5sb9Pqgjg">
-      <span class="emoji">♿</span>
-      <span class="info"><strong>ویلچرها</strong><small>اطلاعات خدمات ویلچر</small></span>
-      <span class="arrow">‹</span>
-    </a>
-
-    <a class="channel" href="https://ble.ir/join/E3nUq89fVo">
-      <span class="emoji">🚆</span>
-      <span class="info"><strong>کانال اصلی ایستگاه راه‌آهن تهران</strong><small>کانال اصلی اطلاع‌رسانی ایستگاه</small></span>
-      <span class="arrow">‹</span>
-    </a>
-
-  </div>
-
-  <div class="note">
-    💡 برای ورود به هر کانال، روی کارت مربوط به آن بزنید. اگر بله از شما خواست، عضویت یا بازکردن کانال را تأیید کنید.
-  </div>
-</main>
-
-<footer>ایستگاه راه‌آهن تهران · دسترسی سریع به کانال‌ها</footer>
+  <main class="wrap">
+    <header>
+      <div class="train" aria-hidden="true">🚆</div>
+      <h1>منوی کانال‌های راه‌آهن تهران</h1>
+      <p>دسترسی سریع به کانال‌های اطلاع‌رسانی ایستگاه راه‌آهن تهران</p>
+    </header>
+    <p class="hint">برای ورود به هر کانال، کارت مربوطه را انتخاب کنید.</p>
+    <nav class="grid" aria-label="کانال‌های راه‌آهن تهران">
+      <a class="channel" href="https://ble.ir/join/BoX6qVgegH" target="_blank" rel="noopener noreferrer"><span class="emoji">🧳</span><span class="label">مسافرین جامانده</span><span class="arrow" aria-hidden="true">‹</span></a>
+      <a class="channel" href="https://ble.ir/join/2uoshkxrfT" target="_blank" rel="noopener noreferrer"><span class="emoji">📋</span><span class="label">حضور و غیاب</span><span class="arrow" aria-hidden="true">‹</span></a>
+      <a class="channel" href="https://ble.ir/join/BNYy1KGty4" target="_blank" rel="noopener noreferrer"><span class="emoji">🎫</span><span class="label">مسافرین بدون بلیت</span><span class="arrow" aria-hidden="true">‹</span></a>
+      <a class="channel" href="https://ble.ir/join/6HtbyBttVR" target="_blank" rel="noopener noreferrer"><span class="emoji">🪪</span><span class="label">بلیت غیرهمنام</span><span class="arrow" aria-hidden="true">‹</span></a>
+      <a class="channel" href="https://ble.ir/join/9Pvf6JFfMc" target="_blank" rel="noopener noreferrer"><span class="emoji">⏰</span><span class="label">تأخیرات قطارها</span><span class="arrow" aria-hidden="true">‹</span></a>
+      <a class="channel" href="https://ble.ir/join/J5sb9Pqgjg" target="_blank" rel="noopener noreferrer"><span class="emoji">♿</span><span class="label">ویلچرها</span><span class="arrow" aria-hidden="true">‹</span></a>
+      <a class="channel" href="https://ble.ir/join/E3nUq89fVo"><span class="emoji">🚉</span><span class="label">کانال اصلی ایستگاه راه‌آهن تهران</span><span class="arrow" aria-hidden="true">‹</span></a>
+    </nav>
+    <footer>ایستگاه راه‌آهن تهران<br>لطفاً برای اطلاع‌رسانی معتبر، کانال مربوط را دنبال کنید.</footer>
+  </main>
 </body>
 </html>
